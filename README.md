@@ -1,13 +1,24 @@
-# React Color Table
+# Generator-GitHub-Acitivity
 
-## Tasks
-There’re 7 boxes in the page and each box can be toggled (white/green) by mouse click. If all the boxes are filled as green, then automatically remove green color from boxes one by one in reversed order every 500 ms. (all mouse click events on boxes should be disabled during this auto process) If user clicks outside of 7 boxes on the page, then stop the above automatic process.
-If user clicks “Replay” button on the page, then play all the history from scratch in 300ms period. (Needs to save history in the backend). While replaying, “Replay” button should be disabled and all the mouse click events should also be disabled.
+## Description
+Additionally, user should be able to generate GitHub activity project and download as a *.zip file.
+Parameters:
+ - Activity Period: Start Date, End Date
+ - Maximum commits per day:
+ - Frequency: How much percentage of the activity period is used
+   For example, 100% -> there's git commit history for all the days during the period.
+   60% -> there's git commit history about 60% of the days in the period
+Notes: Validation is required
+
+## Description
+- Generate git history
+- Convert mkdir, writeFile, and exec function with promisify
+- Make a zip file and download it on frontend.
 
 ## Environment
 - Windows 11
-- Node v18.19.0
-- Npm 10.2.3
+- Node v16.14.0
+- Npm 8.3.1
 
 ## Tech stacks
 - Vite + React + Typescript
@@ -19,7 +30,13 @@ If user clicks “Replay” button on the page, then play all the history from s
    npm install
    ```
 
-2. Run project
+2. Create .env file
+   ```
+   GIT_USERNAME="Generator GitHub Acitivity"
+   GIT_EMAIL="generator.github.activity@gmail.com"
+   ```
+
+3. Run project
    ```shell
    npm run dev
    ```
